@@ -1,3 +1,7 @@
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "#/components/ui/alert-dialog";
+import { Button } from "#/components/ui/button";
+import { Checkbox } from "#/components/ui/checkbox";
+import { Input } from "#/components/ui/input";
 import Image from "next/image";
 
 export default function Home() {
@@ -97,6 +101,31 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+
+        <Button>Click me</Button>
+        <Input placeholder="Type something..." />
+        <Input placeholder="Type something..." />
+        <Checkbox />
+        <Checkbox checked disabled />
+        
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="outline">Show Dialog</Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction>Continue</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </footer>
     </div>
   );
